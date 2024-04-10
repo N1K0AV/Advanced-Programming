@@ -1,0 +1,48 @@
+@startuml
+
+class Vehicle {
+    -make: string
+    -model: string
+    -year: int
+    -price: float
+    +Vehicle(make: string, model: string, year: int, price: float)
+}
+
+class Engine {
+    // attributes and methods for Engine class
+}
+
+class Car {
+    // attributes and methods for Car class
+}
+
+class Truck {
+    // attributes and methods for Truck class
+}
+
+class Yacht {
+    // attributes and methods for Yacht class
+}
+
+class Motorcycle {
+    // attributes and methods for Motorcycle class
+}
+
+class Catalog {
+    -vehicles: list<Vehicle>
+    +add_vehicle(vehicle: Vehicle): void
+    +display_catalog(): void
+}
+
+class AuthenticationModule {
+    // attributes and methods for AuthenticationModule class
+}
+
+class MenuModule {
+    // attributes and methods for MenuModule class
+}
+
+Vehicle --> Catalog
+Catalog "1" --> "*" Vehicle
+
+@enduml
