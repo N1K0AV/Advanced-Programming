@@ -1,0 +1,52 @@
+@startuml
+
+actor User
+participant "Program" as Program
+participant "Authentication Module" as Auth
+participant "Menu Module" as Menu
+participant "Engine Module" as Engine
+participant "Vehicle Module" as Vehicle
+
+User -> Program: Start Program
+Program -> Auth: Authenticate User
+Auth -> User: Request Credentials
+User -> Auth: Provides Credentials
+Auth -> Auth: Validate Credentials
+alt Credentials Valid
+  Auth -> Program: Authentication Successful
+  Program -> Menu: Display Menu
+  loop Until Exit
+    User -> Menu: Choose Option
+    Menu -> Program: Option Selected
+    alt Option: Create Engine
+      Program -> Engine: Create Engine
+      Engine -> Program: Engine Created
+    else Option: Create Car
+      Program -> Vehicle: Create Car
+      Vehicle -> Program: Car Created
+    else Option: Create Truck
+      Program -> Vehicle: Create Truck
+      Vehicle -> Program: Truck Created
+    else Option: Create Yacht
+      Program -> Vehicle: Create Yacht
+      Vehicle -> Program: Yacht Created
+    else Option: Create Motorcycle
+      Program -> Vehicle: Create Motorcycle
+      Vehicle -> Program: Motorcycle Created
+    else Option: View All Engines
+      Program -> Engine: Get All Engines
+      Engine --> Program: List of Engines
+      Program -> User: Display Engines
+    else Option: View All Vehicles
+      Program -> Vehicle: Get All Vehicles
+      Vehicle --> Program: List of Vehicles
+      Program -> User: Display Vehicles
+    end
+  end
+  Program -> User: Exit Program
+else Credentials Invalid
+  Auth -> User: Access Denied
+  Program -> User: Exit Program
+end
+
+@enduml
