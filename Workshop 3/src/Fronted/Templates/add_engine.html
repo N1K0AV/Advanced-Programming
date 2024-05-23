@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Engine</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="add_vehicle.html">Add Vehicle</a></li>
+            <li><a href="all_engines.html">All Engines</a></li>
+            <li><a href="all_vehicles.html">All Vehicles</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form action="/add_engine" method="POST">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required><br><br>
+            <label for="fuel_type">Fuel Type:</label>
+            <input type="text" id="fuel_type" name="fuel_type" required><br><br>
+            <label for="power">Power:</label>
+            <input type="number" id="power" name="power" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <body>
+        <h1>back to home</h1>
+        <!-- Add vehicle form will be displayed here -->
+        <a href="home.html">Back to Main Menu</a>
+    </body>
+    
+</body>
+</html>

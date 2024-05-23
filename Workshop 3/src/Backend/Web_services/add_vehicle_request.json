@@ -1,0 +1,10 @@
+{
+    "action": "add_vehicle",
+    "data": {
+      "make": "Vehicle Make",
+      "model": "Vehicle Model",
+      "year": 2022,
+      "engine_id": "engine_id_of_selected_engine"
+    }
+  }
+  

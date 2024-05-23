@@ -1,0 +1,9 @@
+{
+    "action": "add_engine",
+    "data": {
+      "model": "Engine Model",
+      "fuel_type": "Fuel Type",
+      "power": 200
+    }
+  }
+  

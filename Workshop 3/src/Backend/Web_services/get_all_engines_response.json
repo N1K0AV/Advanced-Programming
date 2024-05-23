@@ -1,0 +1,17 @@
+{
+    "engines": [
+      {
+        "id": "engine_id_1",
+        "model": "Engine Model 1",
+        "fuel_type": "Fuel Type 1",
+        "power": 200
+      },
+      {
+        "id": "engine_id_2",
+        "model": "Engine Model 2",
+        "fuel_type": "Fuel Type 2",
+        "power": 250
+      }
+    ]
+  }
+  

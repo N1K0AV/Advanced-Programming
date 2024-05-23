@@ -1,0 +1,35 @@
+@startuml activity_diagram
+
+start
+
+:Authenticate User;
+if (Authentication Successful?) then (yes)
+  :Display Menu;
+  repeat
+    :Get User Option;
+    if (Option == Create Engine) then (yes)
+      :Create Engine;
+    else if (Option == Create Car) then (yes)
+      :Create Car;
+    else if (Option == Create Truck) then (yes)
+      :Create Truck;
+    else if (Option == Create Yacht) then (yes)
+      :Create Yacht;
+    else if (Option == Create Motorcycle) then (yes)
+      :Create Motorcycle;
+    else if (Option == View All Engines) then (yes)
+      :Display All Engines;
+    else if (Option == View All Vehicles) then (yes)
+      :Display All Vehicles;
+    else if (Option == Exit) then (yes)
+      stop
+    else
+      :Invalid Option;
+    endif
+  repeat while (Option != Exit)
+else (no)
+  :Display Access Denied Message;
+  stop
+endif
+
+@enduml

@@ -1,0 +1,29 @@
+{
+    "vehicles": [
+      {
+        "id": "vehicle_id_1",
+        "make": "Vehicle Make 1",
+        "model": "Vehicle Model 1",
+        "year": 2022,
+        "engine": {
+          "id": "engine_id_1",
+          "model": "Engine Model 1",
+          "fuel_type": "Fuel Type 1",
+          "power": 200
+        }
+      },
+      {
+        "id": "vehicle_id_2",
+        "make": "Vehicle Make 2",
+        "model": "Vehicle Model 2",
+        "year": 2023,
+        "engine": {
+          "id": "engine_id_2",
+          "model": "Engine Model 2",
+          "fuel_type": "Fuel Type 2",
+          "power": 250
+        }
+      }
+    ]
+  }
+  

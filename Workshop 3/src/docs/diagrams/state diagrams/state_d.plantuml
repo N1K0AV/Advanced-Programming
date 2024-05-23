@@ -1,0 +1,40 @@
+@startuml state_d
+
+[*] --> Vehicle
+
+state Vehicle {
+  [*] --> EngineCreated
+  EngineCreated --> VehiclePropertiesSet
+  VehiclePropertiesSet --> VehicleReady
+}
+
+state Car {
+  [*] --> EngineCreated
+  EngineCreated --> CarPropertiesSet
+  CarPropertiesSet --> CarReady
+}
+
+state Truck {
+  [*] --> EngineCreated
+  EngineCreated --> TruckPropertiesSet
+  TruckPropertiesSet --> TruckReady
+}
+
+state Yatch {
+  [*] --> EngineCreated
+  EngineCreated --> YatchPropertiesSet
+  YatchPropertiesSet --> YatchReady
+}
+
+state Motorcycle {
+  [*] --> EngineCreated
+  EngineCreated --> MotorcyclePropertiesSet
+  MotorcyclePropertiesSet --> MotorcycleReady
+}
+
+Vehicle --> Car: Car Object Created
+Vehicle --> Truck: Truck Object Created
+Vehicle --> Yatch: Yatch Object Created
+Vehicle --> Motorcycle: Motorcycle Object Created
+
+@enduml
