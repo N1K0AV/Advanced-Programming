@@ -26,7 +26,7 @@ app = FastAPI()
 
 """drop the directory /static for fastapi could serve the static files from there"""
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 # Definir ruta para el favicon
 @app.get("/favicon.ico")
