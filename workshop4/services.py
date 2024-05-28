@@ -24,7 +24,7 @@ products = Table('products', metadata,
 # Inicializar la aplicación FastAPI
 app = FastAPI()
 
-"""drop the directory /static for fastapi could serve the static files from there"""
+
 
 
 
